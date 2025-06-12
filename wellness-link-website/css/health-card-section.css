@@ -1,0 +1,153 @@
+/* ===== Card Health Coditions ===== */
+
+.spacer-9 {
+  width: 100vw;
+  min-height: 200svh;
+  background-color: #fff;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  gap: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.health-card-header {
+  position: relative;
+  width: 70%;
+  height: max-content;
+  z-index: 0;
+  /* align-self: self-start; */
+  margin-left: -20%;
+}
+
+.health-card-header h1 {
+  color: #1e2e2e;
+  font-weight: bold;
+  font-size: 6em;
+  z-index: 4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: start;
+  transition: color 0.3s ease;
+}
+
+.health-card-header h1 .line-mask {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  /* border: 1px solid red; */
+}
+
+.health-card-header h1 .line-mask span {
+  position: relative;
+  will-change: transform;
+  font-style: normal;
+  font-family: "Expletus Sans";
+  text-transform: none;
+}
+
+.health-card-header span ion-icon {
+  color: #437373;
+  width: 70px;
+  height: 70px;
+  transform: scaleX(-1);
+  z-index: 0;
+  margin-left: 10px;
+}
+
+.health-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100vw;
+  padding: 2rem 1rem;
+}
+
+.health-card {
+  background-color: #0f1818;
+  border-radius: 8px;
+  height: 500px;
+  width: 320px;
+  padding: 20px;
+  color: white;
+  position: relative;
+  transition: background-color 0.4s ease;
+  cursor: pointer;
+  will-change: transform;
+}
+
+.card-5 img {
+  object-position: 70% 0;
+}
+
+.health-card:not(:last-child):hover {
+  background-color: #005200;
+}
+
+.text-health-holder {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 25px;
+}
+
+.disease-text-holder {
+  width: 100%;
+  display: flex;
+  flex: 1 1 22%;
+  min-height: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.disease-text-holder svg {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  transform: rotate(-90deg);
+}
+
+.text-health-holder h2 {
+  max-width: 70%;
+  text-transform: uppercase;
+  font-family: "Dastin", sans-serif;
+}
+
+.text-health-holder h4 {
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.conclusion-health-holder h2 {
+  font-size: 2.5em;
+}
+
+.conclusion-health-holder h4 {
+  font-size: 1.1em;
+  text-justify: inter-word;
+}
+
+.img-health-holder {
+  /* border: 1px solid red; */
+  width: 100%;
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  border-radius: 7px;
+}
+
+.health-card img {
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 7px;
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  transition: transform 0.3s ease; /* Move this here */
+}

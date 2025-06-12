@@ -1,0 +1,240 @@
+/* ===== Footer ===== */
+
+.footer-spacer {
+  height: 50svh;
+  z-index: 1;
+}
+
+.health-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50svh;
+  background-color: #2b3530;
+  padding-top: 20px;
+  text-align: center;
+  z-index: 3;
+  clip-path: inset(100% 0 0 0);
+}
+
+.footer-content {
+  width: 100vw;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  gap: 50px;
+  align-items: start;
+}
+
+.get-contact-holder {
+  /* border: 1px solid red; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 20px;
+  padding-left: 50px;
+  /* padding-top: 20px; */
+}
+
+.get-contact-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: self-start;
+  gap: 10px;
+}
+
+.get-contact-text h3 {
+  font-family: "Expletus Sans";
+  font-size: 2em;
+  font-weight: 800;
+  color: #fff;
+}
+
+.get-contact-holder .get-contact-text p {
+  color: #fff;
+  text-transform: none;
+  font-size: 1em;
+  max-width: 500px;
+  text-align: start;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.get-contact-email {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  width: 100%;
+  gap: 5px;
+}
+
+.get-contact-email input {
+  width: 70%;
+  padding: 15px 25px 15px 20px;
+  /* border: 1px solid #2b3530; */
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  background-color: #d4ffec;
+}
+
+.get-contact-email input::placeholder {
+  color: #14141485;
+  font-size: 1.1em;
+}
+
+.button-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.button-contact button {
+  padding: 30px;
+  border: none;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #398686;
+  color: #fff;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* align-self: center; */
+}
+
+.button-contact button svg {
+  width: 28px;
+  height: 28px;
+  transform: rotate(-130deg);
+}
+
+.button-contact p {
+  color: gray;
+  text-decoration: underline;
+}
+
+.button-contact button:hover + p {
+  color: #fff;
+}
+
+.button-contact button svg:hover {
+  color: #000;
+}
+
+.privacy-text {
+  color: gray;
+  text-transform: capitalize;
+  font-size: 0.9em;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.privacy-text span {
+  font-style: italic;
+  color: #fff;
+  font-family: "PP Editorial Old";
+}
+
+.nav-footer-holder {
+  display: flex;
+  justify-content: flex-end;
+  /* border: 1px solid red; */
+  width: 40%;
+  height: 100%;
+  gap: 20px;
+}
+
+.nav-footer-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  width: 30%;
+  color: white;
+  list-style: none;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.nav-footer-list h4 {
+  font-size: 0.8em;
+  font-weight: 400;
+  color: gray;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  user-select: none;
+}
+
+.nav-footer-list li {
+  cursor: pointer;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 0.9em;
+  color: #8f8f8f;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.nav-footer-list li a {
+  position: relative;
+  display: inline-block;
+  will-change: transform;
+  text-transform: none;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 1em;
+  color: #8f8f8f;
+  user-select: none;
+  transition: color 0.5s;
+}
+
+.nav-footer-list li a:hover {
+  color: #fff;
+}
+
+.nav-footer-list li a::after {
+  position: absolute;
+  content: "";
+  top: 106.5%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s cubic-bezier(0.34, 0.75, 0.59, 0.95);
+}
+
+.nav-footer-list li a:hover:after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.copyright {
+  position: absolute;
+  right: 1%;
+  bottom: 5%;
+  width: max-content;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+}
+
+.copyright p span {
+  max-width: 20%;
+}
+
+.copyright p {
+  text-transform: capitalize;
+  font-size: 0.7em;
+  text-align: start;
+  font-weight: 300;
+  letter-spacing: 1px;
+}

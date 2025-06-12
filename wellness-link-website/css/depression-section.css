@@ -1,0 +1,223 @@
+/* ===== Depression Section ===== */
+.spacer-3 {
+  background-color: #fff;
+  /* position: relative; */
+  min-height: 100svh;
+  width: 100%;
+  z-index: 1;
+  transition: background-color 0.5s ease;
+}
+
+.video-background {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+  padding-bottom: 100px;
+  /* clip-path: polygon(95% 0%, 95% 100%, 5% 100%, 5% 0%); */
+}
+
+.video-background .backg-video {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: 0% 50%;
+  transform: scale(1.2);
+  z-index: 0;
+}
+
+.video-background .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  backdrop-filter: blur(50px) brightness(0.6);
+  z-index: 0;
+  transition: all 0.5s ease;
+}
+
+@keyframes colorCycle1 {
+  0% {
+    color: red;
+  }
+  33% {
+    color: blue;
+  }
+  66% {
+    color: yellow;
+  }
+  100% {
+    color: red;
+  }
+}
+
+.color-cycle1 {
+  animation: colorCycle1 3s infinite ease-in-out;
+}
+
+.change-bg {
+  background-color: transparent !important;
+}
+
+.change-bg1 {
+  background-color: #000;
+}
+
+.small-spacer {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  /* border: 1px solid red; */
+  padding: 40px;
+}
+
+.in-spacer {
+  width: 20%;
+}
+
+.above-container {
+  padding: 0 10px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid blue; */
+  height: max-content;
+  display: flex;
+  flex: 1fr 2fr;
+  justify-content: center;
+  align-items: center;
+  /* z-index: 10; */
+}
+
+.above-img-container {
+  width: max-content;
+  /* border: 1px solid red; */
+  height: 100%;
+  display: flex;
+  transform: rotate(-3deg);
+  justify-content: start;
+  align-items: center;
+  /* overflow: hidden; */
+  /* justify-self: start; */
+}
+
+.above-text-container {
+  width: 100%;
+  /* border: 1px solid yellow; */
+}
+
+.above-container img {
+  width: 340px;
+  border-radius: 2%;
+}
+
+.above-text-container h1 {
+  pointer-events: none;
+  line-height: 1.1;
+  font-size: 3.4rem;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+  text-align: start;
+}
+
+.above-text-container h1.change-text-color,
+.text-below-container h2.change-text-color {
+  color: white;
+}
+
+.below-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* border: 1px solid red; */
+}
+
+.big-spacer {
+  width: 60%;
+  padding: 50px;
+  /* border: 1px solid yellow; */
+}
+
+.right-below-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  flex: 1;
+  max-width: 450px;
+  min-width: 300px;
+  padding: 20px;
+  padding-top: 50px;
+  height: max-content;
+}
+
+.img-below-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  transform: translateY(-20px);
+  border-radius: 5px;
+}
+
+.img-below-container video {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+  transform: scale(1.4);
+}
+
+.text-below-container {
+  /* border: 1px solid red; */
+  padding: 40px 0;
+  width: max-content;
+}
+
+.text-below-container h2 {
+  display: block;
+  color: #fff;
+  font-weight: 500;
+}
+
+.text-below-container button {
+  padding: 17px 0;
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: 50px;
+  width: 50%;
+  color: white;
+  margin-top: 35px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.text-below-container button:hover {
+  background-color: white;
+  color: black;
+}
+
+.img-cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(102, 46, 46);
+  border-radius: 2%;
+  z-index: 100;
+}
+
+.video-cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(40, 99, 107);
+  border-radius: 2%;
+  z-index: 100;
+}

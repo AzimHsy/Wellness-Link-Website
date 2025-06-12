@@ -1,0 +1,370 @@
+/* ===== Features Section ===== */
+.spacer-1 {
+  background-color: #2b3530;
+  height: 170svh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.circle-wrapper {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.circle-info {
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.663);
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.7s cubic-bezier(1, 0.1, 0.35, 0.91);
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.circle-info:hover {
+  transform: scale(3.6);
+}
+
+.circle-text {
+  /* border: 1px solid red; */
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+  font-family: sans-serif;
+  font-weight: 400;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+
+.text-one,
+.text-two {
+  color: black;
+  transition: none;
+  text-align: center; /* Ensure text is centered */
+  text-justify: inter-word;
+}
+
+.text-one {
+  line-height: 0.7;
+}
+
+.text-two {
+  position: absolute;
+  text-align: center;
+  overflow: hidden;
+  font-size: 14px;
+  width: 180px;
+  text-justify: inter-word;
+}
+
+.text-detail-1 {
+  top: 10%;
+  width: 210px;
+  left: -90%;
+  /* border: 1px solid red; */
+  font-size: 0.9em;
+}
+
+.text-detail-2 {
+  top: 10%;
+  left: -40%;
+  width: 150px;
+}
+
+.text-detail-3 {
+  top: 10%;
+  left: -70%;
+  width: 190px;
+}
+
+.text-detail-4 {
+  top: 10%;
+  left: -50%;
+  width: 150px;
+  font-size: 13px;
+}
+
+.circle-info-2:hover {
+  transform: scale(3);
+}
+
+.circle-info-4:hover {
+  transform: scale(3.1);
+}
+
+.header-feature {
+  position: relative;
+  padding-top: 100px;
+  /* transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); */
+}
+
+.header-feature h1:first-child {
+  color: white;
+  line-height: 1.2;
+  font-size: 3.6em;
+  text-transform: uppercase;
+  font-family: "Expletus Sans", sans-serif;
+  font-weight: 500;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.header-feature h1:last-child span {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+}
+
+.all-feature {
+  position: relative;
+  width: 100%;
+  margin-bottom: 0;
+  height: 70%;
+  padding: 10px;
+}
+
+.feature-container {
+  margin-top: 110px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  gap: 30px;
+}
+
+.feature {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  /* padding: 10px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.feature1 {
+  transform: translateY(200px);
+}
+
+.feature3 {
+  position: relative;
+  height: 60%;
+  transform: translateY(80px);
+  background-color: #1d2e258a;
+  border-radius: 50px 50px 200px 50px;
+}
+
+.feature-img {
+  border-radius: 60px;
+  border: 3px solid white;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.feature-img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    10deg,
+    rgba(0, 0, 1, 0.733) 5%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: 1;
+}
+
+.img2 {
+  position: relative;
+  height: 75%;
+  border-bottom-right-radius: 200px;
+}
+
+.img3 {
+  border-bottom-right-radius: 200px;
+}
+
+.img4 {
+  border-top-right-radius: 100px;
+}
+
+.img4 img {
+  object-position: 40% 0%;
+}
+
+.feature-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feature-img h2 {
+  color: white;
+  font-size: 1.6em;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  transform: scale(3);
+  margin-bottom: 30px;
+}
+
+.feature-text {
+  display: flex;
+  padding: 50px;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: start;
+  border-radius: 50px;
+  border: 3px solid white;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-bottom-right-radius: 200px;
+}
+
+.feature-text h2 {
+  /* border: 1px solid red; */
+  color: #fff;
+  font-family: "PP Editorial Old";
+  font-weight: 300;
+  font-size: 3em;
+}
+
+.feature-text p {
+  margin-top: 20px;
+  font-size: 1.2em;
+  max-width: 400px;
+  text-transform: none;
+  line-height: 1.4;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+}
+
+.overlay-text {
+  /* border: 1px solid red; */
+  margin: 30px 0 20px 10px;
+  width: max-content;
+  height: max-content;
+  padding-left: 10px;
+  bottom: 0;
+  position: absolute;
+  z-index: 3;
+}
+
+.overlay-text h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5em;
+}
+
+.feature-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  border: none;
+  background-color: transparent;
+  border-radius: 50px;
+  padding: 6px 18px 6px 14px;
+  cursor: pointer;
+  font-weight: 600;
+  overflow: hidden;
+  transition: background-color 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.feature-btn::before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  transform: translateX(9px);
+  width: 30%;
+  height: 100%;
+  padding: 0;
+  border-radius: 55px;
+  transition: width 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.feature .icon-btn {
+  font-size: 20px;
+  color: #1e2e2e;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.feature-circle {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid #1e2e2e;
+  border-radius: 50%;
+  margin-right: 12px;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transform-origin: center;
+}
+
+.feature-text-btn {
+  font-size: 16px;
+  color: #fff;
+  position: relative;
+  padding-left: 10px;
+  z-index: 1;
+  transition: color 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+    transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.feature-btn:hover .feature-circle {
+  transform: scale(0.325);
+  background-color: #1e1e1e;
+}
+
+.feature-btn:hover .icon-btn {
+  transform: translateX(10px);
+}
+
+.feature-btn:hover .feature-text-btn {
+  color: #1e2e2e;
+  transform: translateX(-5px);
+}
+
+.feature-btn:hover::before {
+  width: 100%;
+  padding: 0 10px;
+}

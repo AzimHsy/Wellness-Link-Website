@@ -1,0 +1,161 @@
+.menu-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0f0f0f;
+  z-index: 100;
+}
+
+.menu-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: left bottom;
+  will-change: transform, opacity;
+  user-select: none;
+}
+
+.menu-items,
+.menu-footer {
+  width: 100%;
+  padding: 2.5em;
+  display: flex;
+  grid-area: 2.5em;
+}
+
+.col-lg {
+  flex: 3;
+}
+
+.col-sm {
+  flex: 2;
+}
+
+.menu-items .col-lg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-preview-img {
+  position: relative;
+  width: 45%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.menu-preview-img img {
+  position: absolute;
+  will-change: transform, opacity;
+}
+
+.menu-items .col-sm {
+  padding: 2.5em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+}
+
+.menu-links,
+.menu-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.link {
+  padding-bottom: 6px;
+}
+
+.link,
+.social {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  /* border: 1px solid red; */
+}
+
+.link a,
+.social a {
+  display: inline-block;
+  will-change: transform;
+  transition: color 0.5s;
+}
+
+.link a {
+  font-size: 3.5rem;
+  letter-spacing: -0.02rem;
+}
+
+.social a {
+  color: #8f8f8f;
+}
+
+.social a:hover {
+  color: #fff;
+}
+
+.menu-footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.menu-footer .col-sm {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* button */
+
+.link a::after,
+.social a::after,
+.menu-footer a::after {
+  position: absolute;
+  content: "";
+  top: 102.5%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s cubic-bezier(0.34, 0.75, 0.59, 0.95);
+}
+
+.link a:hover::after,
+.social a:hover::after,
+.menu-footer a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.link a,
+.social a {
+  transform: translateY(150%);
+  opacity: 0;
+}
+
+.menu-content {
+  transform: translateX(-100px) translateY(-100px) scale(1.5) rotate(-15deg);
+  opacity: 0.25;
+}
+
+.menu-overlay {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+}
+
+.container-for-all {
+  position: relative;
+  will-change: transform;
+  transform-origin: right top;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}

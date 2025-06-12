@@ -1,0 +1,226 @@
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  padding: 1.1em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
+  /* border: 1px solid red; */
+  will-change: transform;
+  height: max-content;
+  z-index: 101;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.logo a h4 {
+  font-family: "Glitten", sans-serif;
+  text-transform: none;
+  letter-spacing: 1px;
+  font-size: 1.7em;
+  color: #ffffff;
+  text-shadow: 0 0 10px #000;
+}
+
+.signup-btn-container {
+  width: max-content;
+  padding: 15px 17px;
+  border-radius: 30px;
+  /* border: 1px solid red; */
+  background-color: #b6b6b67a;
+  display: flex;
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.signup-btn-container a {
+  text-transform: none;
+  color: #000;
+  font-size: 1em;
+  letter-spacing: 0.075em;
+  /* word-spacing: 1px; */
+  font-weight: 500;
+  /* border: 1px solid red; */
+}
+
+.signup-btn-container .login-circle {
+  width: 8px;
+  height: 8px;
+  /* background-color: #1e1e1e; */
+  border: 1px solid #000;
+  border-radius: 50%;
+  transition: all 0.175s ease;
+}
+
+.signup-btn-container:hover .login-circle {
+  transform: scale(0.7);
+  background-color: #000;
+}
+
+.white-theme:hover .login-circle {
+  background-color: white;
+}
+
+.white-theme:hover .login-circle {
+  background-color: white;
+}
+
+.menu-btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 23px 17px;
+  min-width: 110px;
+  border-radius: 30px;
+  backdrop-filter: blur(7px);
+  cursor: pointer;
+}
+
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-svg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu-svg svg {
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.menu-btn-container:hover svg {
+  transform: rotate(90deg) !important;
+}
+
+.menu-svg svg#close-icon {
+  display: none;
+}
+
+.menu-btn p#menu-close {
+  display: none;
+}
+
+.menu-btn p {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  user-select: none;
+  color: #fff;
+  transform-origin: top left;
+  will-change: transform, opacity;
+}
+
+.hover-slide {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.hover-slide span {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.2s ease;
+  /* border: 1px solid red; */
+}
+
+.hover-slide.white-text-span span,
+.hover-slide.white-text-span::before {
+  color: white;
+}
+
+.hover-slide::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  transform: translateY(110%);
+  transition: transform 0.4s ease;
+  color: inherit;
+}
+
+.signup-btn-container:hover .hover-slide span,
+.menu-btn-container:hover .hover-slide span {
+  transform: translateY(-110%);
+}
+
+.signup-btn-container:hover .hover-slide::before,
+.menu-btn-container:hover .hover-slide::before {
+  transform: translateY(0);
+}
+
+.nav {
+  transform: translateY(-120%);
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    justify-content: space-between;
+  }
+
+  .logo a h4 {
+    font-size: 1rem;
+  }
+
+  .signup-btn-container a {
+    font-size: 14px;
+  }
+
+  .menu-btn-container {
+    background-color: #1e1e1e;
+    padding: 20px 17px;
+  }
+
+  .signup-btn-container {
+    padding: 14px 16px;
+  }
+
+  .hover-slide::before {
+    display: none;
+  }
+
+  .menu-btn p {
+    font-size: 0.9em;
+    display: none;
+  }
+
+  .menu-svg svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .hover-slide::before,
+  .hover-slide span {
+    font-size: 0.95em;
+  }
+
+  .cta-label p {
+    color: #1e1e1e;
+    font-size: 0.8em;
+    font-weight: 400;
+  }
+}

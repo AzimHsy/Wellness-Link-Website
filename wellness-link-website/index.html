@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wellness-Link Website</title>
+
+    <!-- GreenSock Animation Platform Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/CustomEase.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/loader.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/menu-overlay.css" />
+    <link rel="stylesheet" href="css/hero-section.css" />
+    <link rel="stylesheet" href="css/intro-section.css" />
+    <link rel="stylesheet" href="css/features-section.css" />
+    <link rel="stylesheet" href="css/lifestyle-quiz-section.css" />
+    <link rel="stylesheet" href="css/depression-section.css" />
+    <link rel="stylesheet" href="css/depression-tips.css" />
+    <link rel="stylesheet" href="css/depression-quiz-section.css" />
+    <link rel="stylesheet" href="css/health-condition-section.css" />
+    <link rel="stylesheet" href="css/health-images-overlay.css" />
+    <link rel="stylesheet" href="css/health-card-section.css" />
+    <link rel="stylesheet" href="css/health-stats-section.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+  </head>
+
+  <body>
+    <!-- Intro Loader Animation -->
+    <div class="first-loader">
+      <div class="second-loader">
+        <div class="overlay">
+          <div class="block"></div>
+          <div class="block"></div>
+        </div>
+
+        <div class="progress-bar">
+          <p>Loading</p>
+          <p>/<span id="counter">0</span></p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="intro-logo">
+        <div class="word" id="word-1">
+          <h1><span>Wellness.</span></h1>
+        </div>
+        <div class="word" id="word-2">
+          <h1>
+            <span>Link.</span>
+          </h1>
+        </div>
+      </div>
+      x
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="nav">
+      <div class="logo">
+        <a href="#">
+          <h4>Wellness.Link.</h4>
+        </a>
+      </div>
+      <div class="signup-btn-container">
+        <a href="#" class="hover-slide" data-text="Register / Login"
+          ><span>Register / Login</span></a
+        >
+        <div class="login-circle"></div>
+      </div>
+      <div class="menu-btn-container">
+        <div class="menu-btn">
+          <p href="#" class="hover-slide" id="menu-open" data-text="MENU">
+            <span>MENU</span>
+          </p>
+          <p href="#" class="hover-slide" id="menu-close" data-text="CLOSE">
+            <span>CLOSE</span>
+          </p>
+        </div>
+        <div class="menu-svg">
+          <svg
+            id="open-icon"
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 24H40M8 36H40M8 12H40"
+              stroke="white"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <svg
+            id="close-icon"
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14 14L34 34M14 34L34 14"
+              stroke="white"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Fullscreen Overlay -->
+    <div class="menu-overlay">
+      <div class="menu-content">
+        <div class="menu-items">
+          <div class="col-lg">
+            <div class="menu-preview-img">
+              <img src="assets/images/menu-img-1.avif" alt="" />
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="menu-links">
+              <div class="link">
+                <a data-img="assets/images/menu-img-1.avif" href="#">Visions</a>
+              </div>
+              <div class="link">
+                <a data-img="assets/images/menu-img-2.avif" href="#">Core</a>
+              </div>
+              <div class="link">
+                <a data-img="assets/images/menu-img-3.avif" href="#">Insight</a>
+              </div>
+              <div class="link">
+                <a data-img="assets/images/menu-img-4.avif" href="#">Connect</a>
+              </div>
+            </div>
+            <div class="menu-socials">
+              <div class="social"><a href="#">Facebook</a></div>
+              <div class="social"><a href="#">Instagram</a></div>
+              <div class="social"><a href="#">LinkedIn</a></div>
+              <div class="social"><a href="#">Tiktok</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-footer">
+          <div class="col-lg">
+            <a href="#">Run Sequence</a>
+          </div>
+          <div class="col-sm">
+            <a href="#">Origin</a>
+            <a href="#">Join Signal</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="main-content">
+      <div class="container">
+        <div class="hero-img">
+          <div class="hero-video-overlay"></div>
+          <video class="hero-video" loop muted playsinline>
+            <source
+              src="https://videos.pexels.com/video-files/4811927/4811927-hd_1920_1080_30fps.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+
+        <div class="header">
+          <div class="hero-copy">
+            <div class="line">
+              <h1><span>Stay</span> Connected,</h1>
+            </div>
+            <div class="line">
+              <h1>Stay <span>Healthy.</span></h1>
+            </div>
+          </div>
+          <div class="line">
+            <p>Linking You to Better Health, Every Day.</p>
+          </div>
+        </div>
+
+        <div class="cta">
+          <div class="cta-label">
+            <p>explore our features</p>
+          </div>
+          <div class="cta-icon">
+            <ion-icon name="arrow-forward-outline" class="icon-main"></ion-icon>
+            <ion-icon name="arrow-forward-outline" class="icon-new"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Health Awareness Section -->
+    <div class="intro-section">
+      <div class="intro-section-container">
+        <div class="svg-container">
+          <svg
+            id="intro-line"
+            width="3008"
+            height="5424"
+            viewBox="0 0 3008 5424"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2656.5 -13.5C2656.5 -13.5 2587.3 229.228 2626.5 373.5C2719.04 714.116 2997.71 848.121 2990 1201C2979.43 1684.63 2652.32 1924.66 2251.5 2195.5C1598.17 2636.96 649.841 1573.7 233 2243C16.6142 2590.44 -101.534 2940.82 120 3285C412.069 3738.77 1552 3437.5 1552 3437.5C1552 3437.5 2617.37 3244.36 2877 3743.5C3067.38 4109.51 3051.57 4466.36 2805.5 4797.5C2489.17 5223.17 1608.82 4507.39 1465.5 5018C1422.76 5170.28 1465.5 5423 1465.5 5423"
+              stroke="black"
+              stroke-width="6"
+            />
+          </svg>
+        </div>
+        <div class="intro-holder intro-row1">
+          <h1>
+            Great health isn’t just about treatment and medicine, but awareness
+            and action
+          </h1>
+          <div class="intro-spacer"></div>
+        </div>
+        <div class="intro-holder intro-row2">
+          <div class="intro-img-spacer"></div>
+
+          <div class="img-holder-intro">
+            <div class="first-intro-img">
+              <img
+                src="https://images.unsplash.com/photo-1742832599361-7aa7decd73b4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+            </div>
+
+            <div class="intro-text-holder">
+              <h2>Malaysia’s Silent Struggle: Are We Ignoring the Signs?</h2>
+            </div>
+            <div class="intro-desc-holder">
+              <p>
+                “It often starts with something small — a cough, a bit of
+                fatigue, a feeling you brush off. But months later, it could
+                turn into something far more serious. Many health conditions go
+                unnoticed until it’s too late, even though they’re preventable
+                with early detection.”
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="intro-holder intro-row3">
+          <div class="img-holder2-intro">
+            <div class="sec-intro-img">
+              <img
+                src="https://images.unsplash.com/photo-1672754608528-8bde41dee0c2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+            </div>
+
+            <div class="intro-text2-holder">
+              <h2>Across Malaysia, stories like these happen every day.</h2>
+            </div>
+            <div class="intro-desc2-holder">
+              <p>
+                “Many people go about their lives, unaware of the silent signals
+                their bodies are trying to send. Fatigue, shortness of breath,
+                chest discomfort — often brushed off as ‘ Normal ’, until it’s
+                no longer something small.”
+              </p>
+            </div>
+          </div>
+          <div class="intro-img-spacer2">
+            <div class="deco-img">
+              <img
+                src="https://images.unsplash.com/photo-1735220984872-46904fc0baca?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="health-awareness-spacer"></div>
+
+      <div class="health-awareness-section">
+        <div class="left-section-container">
+          <div class="left-content-holder">
+            <div class="heading-section">
+              <p>Why Early Awareness Matters</p>
+              <h1>
+                Health issues often start silently. But awareness saves lives.
+              </h1>
+            </div>
+            <div class="desc-section">
+              <p>
+                In Malaysia, many are unaware of early symptoms until it's too
+                late. Wellness Link was created to change that. By encouraging
+                regular self-checks, tracking symptoms, and connecting users to
+                nearby clinics, we're helping Malaysians take control of their
+              </p>
+              <div class="health-awareness-btn">
+                <a href="#">Begin prioritizing your health today</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-section-container">
+          <div class="images-section">
+            <div class="img-awareness-holder">
+              <img
+                src="https://images.unsplash.com/photo-1614107070261-2aa1304618f6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+            </div>
+            <div class="img-awareness-holder">
+              <img
+                src="https://images.unsplash.com/photo-1731343887664-e82d73dcefa4?q=80&w=1922&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="spacer-1">
+      <div class="header-feature">
+        <h1>Explore</h1>
+        <h1><span>Wellness Link Features</span></h1>
+      </div>
+      <div class="all-feature">
+        <div class="feature-container">
+          <div class="feature feature1">
+            <div class="feature-img img1">
+              <img
+                src="https://images.pexels.com/photos/6169863/pexels-photo-6169863.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt=""
+              />
+              <div class="overlay-text">
+                <h2>Nearby Clinic Finder</h2>
+                <button class="feature-btn">
+                  <span class="feature-circle">
+                    <ion-icon
+                      name="arrow-forward-outline"
+                      class="icon-btn"
+                    ></ion-icon>
+                  </span>
+                  <span class="feature-text-btn">Try it Now</span>
+                </button>
+              </div>
+              <div class="circle-wrapper">
+                <button class="circle-info circle-info-1"></button>
+                <div class="circle-text text1">
+                  <span class="text-one text-info-1">About</span>
+                </div>
+                <div class="circle-text text2">
+                  <span class="text-two text-detail-1"
+                    >In case of emergencies or scheduled check-ups, users can
+                    quickly locate nearby clinics and get directions via Google
+                    Maps. This adds real-world connectivity and convenience,
+                    especially for those who may need urgent care.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="feature-img img2">
+              <img
+                src="https://images.pexels.com/photos/4474052/pexels-photo-4474052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt=""
+              />
+              <div class="overlay-text">
+                <h2>BMI Calculator</h2>
+                <button class="feature-btn">
+                  <span class="feature-circle">
+                    <ion-icon
+                      name="arrow-forward-outline"
+                      class="icon-btn"
+                    ></ion-icon>
+                  </span>
+                  <span class="feature-text-btn">Try it Now</span>
+                </button>
+              </div>
+              <div class="circle-wrapper">
+                <button class="circle-info circle-info-2"></button>
+                <div class="circle-text text1">
+                  <span class="text-one text-info-2">About</span>
+                </div>
+                <div class="circle-text text2">
+                  <span class="text-two text-detail-2"
+                    >BMI gives users a simple way to assess their weight-related
+                    health risk. By including it, users can monitor their
+                    fitness status and make better lifestyle choices.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="feature feature2">
+            <div class="feature-img img3">
+              <img
+                src="https://images.pexels.com/photos/3873209/pexels-photo-3873209.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt=""
+              />
+              <div class="overlay-text">
+                <h2>Medication Reminder</h2>
+                <button class="feature-btn">
+                  <span class="feature-circle">
+                    <ion-icon
+                      name="arrow-forward-outline"
+                      class="icon-btn"
+                    ></ion-icon>
+                  </span>
+                  <span class="feature-text-btn">Try it Now</span>
+                </button>
+              </div>
+              <div class="circle-wrapper">
+                <button class="circle-info circle-info-3"></button>
+                <div class="circle-text text1">
+                  <span class="text-one text-info-3">About</span>
+                </div>
+                <div class="circle-text text2">
+                  <span class="text-two text-detail-3"
+                    >Many users, especially those with chronic illnesses,
+                    struggle with remembering to take their medicine on time.
+                    This feature ensures users stay on track, improving
+                    medication adherence and treatment effectiveness.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="feature-img img4">
+              <img
+                src="https://images.pexels.com/photos/907865/pexels-photo-907865.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt=""
+              />
+              <div class="overlay-text">
+                <h2>Water Intake Tracker</h2>
+                <button class="feature-btn">
+                  <span class="feature-circle">
+                    <ion-icon
+                      name="arrow-forward-outline"
+                      class="icon-btn"
+                    ></ion-icon>
+                  </span>
+                  <span class="feature-text-btn">Try it Now</span>
+                </button>
+              </div>
+              <div class="circle-wrapper">
+                <button class="circle-info circle-info-4"></button>
+                <div class="circle-text text1">
+                  <span class="text-one text-info-4">About</span>
+                </div>
+                <div class="circle-text text2">
+                  <span class="text-two text-detail-4"
+                    >Hydration is a key part of overall health. This light,
+                    interactive feature encourages users to build healthy daily
+                    habits, while also making the app feel more engaging and
+                    motivating.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="feature feature3">
+            <div class="feature-text">
+              <div class="dot"></div>
+              <h2>Why are these features ?</h2>
+              <p>
+                The features in Wellness-Link were carefully selected to support
+                users in managing their health more effectively, especially
+                those dealing with ongoing medical conditions. Each feature
+                addresses a real need in personal wellness management.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LifeStyle Quiz Section -->
+    <div class="spacer-2">
+      <div class="black-container">
+        <div class="bulat"></div>
+        <div class="header-quiz">
+          <h1>Let's</h1>
+          <h1><span>Rate Your Lifestyle !</span></h1>
+        </div>
+        <div class="quiz-container">
+          <div class="question-counter">
+            Question <span id="questionNumber">1</span> / 10
+          </div>
+          <div id="feedback"></div>
+          <div class="question">
+            <h2><span class="question-text"></span></h2>
+          </div>
+
+          <div class="ans-container">
+            <div class="ans ans1"></div>
+            <div class="ans ans3"></div>
+            <div class="ans ans2"></div>
+
+            <div class="ans ans4"></div>
+          </div>
+          <button id="nextBtn">
+            <div class="text-wrap">
+              <span>Next Question</span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Depression Section -->
+    <div class="spacer-3">
+      <div class="video-background">
+        <video class="backg-video" autoplay muted loop playsinline>
+          <source
+            src="https://videos.pexels.com/video-files/5717609/5717609-uhd_2560_1440_25fps.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+        <div class="small-spacer"></div>
+        <div class="small-spacer"></div>
+        <div class="above-container">
+          <div class="above-img-container">
+            <div class="img-cover"></div>
+            <img
+              src="https://images.unsplash.com/photo-1512080701059-1cbffe38d1c9?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="a"
+            />
+          </div>
+          <div class="small-spacer in-spacer"></div>
+          <div class="above-text-container">
+            <h1 class="above-text above-text1">
+              Did you know, <span class="color-cycle1">depression</span>
+            </h1>
+            <h1 class="above-text above-text2">
+              is a <span class="color-cycle1">medical condition,</span>
+            </h1>
+            <h1 class="above-text above-text3">not just a mood?</h1>
+          </div>
+        </div>
+
+        <div class="below-container">
+          <div class="big-spacer"></div>
+          <div class="right-below-container">
+            <div class="img-below-container">
+              <div class="video-cover"></div>
+              <video
+                class="interactive-video"
+                autoplay
+                loop
+                muted
+                playsinline
+                src="assets/videos/I Can't Breathe - Mental Health Is Health Campaign _ CAMH.mp4"
+              ></video>
+            </div>
+            <div class="text-below-container">
+              <h2 class="below-text below-text1">Depression isn’t weakness.</h2>
+              <h2 class="below-text below-text2">It’s a real illness —</h2>
+              <h2 class="below-text below-text3">and it deserves care.</h2>
+              <button><a href="#"></a>Find out more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Prevent Tips -->
+    <div class="spacer-4">
+      <section class="tips-section">
+        <h2>Tips to Prevent Depression</h2>
+        <div class="tips-grid">
+          <div class="tip">
+            <div class="border-line"></div>
+            <div class="tip-number">1</div>
+            <div class="tip-title">Stay socially connected.</div>
+            <div class="tip-description">
+              Isolation can increase depression. Regularly connect with loved
+              ones, even a quick chat helps.
+            </div>
+          </div>
+          <div class="tip">
+            <div class="border-line"></div>
+            <div class="tip-number">2</div>
+            <div class="tip-title">Maintain a healthy routine.</div>
+            <div class="tip-description">
+              Sleep, exercise, and eating well are foundational to good mental
+              health.
+            </div>
+          </div>
+          <div class="tip">
+            <div class="border-line"></div>
+            <div class="tip-number">3</div>
+            <div class="tip-title">Limit screen time and social media.</div>
+            <div class="tip-description">
+              Excessive use can contribute to feelings of inadequacy or anxiety.
+            </div>
+          </div>
+          <div class="tip">
+            <div class="border-line"></div>
+            <div class="tip-number">4</div>
+            <div class="tip-title">Practice mindfulness and meditation.</div>
+            <div class="tip-description">
+              Mindfulness reduces stress and enhances emotional regulation.
+            </div>
+          </div>
+          <div class="tip">
+            <div class="border-line"></div>
+            <div class="tip-number">5</div>
+            <div class="tip-title">Engage in physical activity.</div>
+            <div class="tip-description">
+              Exercise releases endorphins that naturally elevate your mood.
+            </div>
+          </div>
+          <div class="tip">
+            <div class="border-line"></div>
+            <div class="tip-number">6</div>
+            <div class="tip-title">Set realistic goals.</div>
+            <div class="tip-description">
+              Break large tasks into smaller steps to avoid feeling overwhelmed.
+            </div>
+          </div>
+          <div class="tip">
+            <div class="border-line"></div>
+            <div class="tip-number">7</div>
+            <div class="tip-title">Limit alcohol and avoid drugs.</div>
+            <div class="tip-description">
+              These substances can worsen depression and increase anxiety.
+            </div>
+          </div>
+          <div class="tip">
+            <div class="border-line"></div>
+            <div class="tip-number">8</div>
+            <div class="tip-title">Do things you enjoy.</div>
+            <div class="tip-description">
+              Hobbies, music, or nature walks can bring joy and distract from
+              negativity.
+            </div>
+          </div>
+          <div class="tip">
+            <div class="border-line"></div>
+            <div class="tip-number">9</div>
+            <div class="tip-title">Reach out for help when needed.</div>
+            <div class="tip-description">
+              Talking to a therapist or counselor can provide support and
+              guidance.
+            </div>
+          </div>
+          <div class="tip">
+            <div class="border-line"></div>
+            <div class="tip-number">10</div>
+            <div class="tip-title">Track your thoughts and mood.</div>
+            <div class="tip-description">
+              Journaling helps identify patterns and triggers that affect your
+              wellbeing.
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Depression Quiz Section -->
+    <div class="spacer-5">
+      <div class="depression-container">
+        <div class="depression-ellipse"></div>
+        <div class="depression-header">
+          <h1>Let’s</h1>
+          <h1><span>Talk About Depression</span></h1>
+        </div>
+        <div class="depression-quiz">
+          <div class="depression-counter">
+            Question <span id="depressionQuestionNum">1</span> / 10
+          </div>
+          <div id="depressionFeedback"></div>
+          <div class="depression-question">
+            <h2><span class="question-text-depression"></span></h2>
+          </div>
+          <div class="depression-answers">
+            <div class="depression-option option1"></div>
+            <div class="depression-option option3"></div>
+            <div class="depression-option option2"></div>
+            <div class="depression-option option4"></div>
+          </div>
+          <button id="depressionNextBtn">
+            <div class="text-wrap">
+              <span>Next Question</span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Health Condition Header -->
+    <div class="spacer-6">
+      <div class="health-intro-container">
+        <h1>
+          Understanding health conditions is important because early awareness,
+          proper treatment, and lifestyle adjustments can make a big difference
+          in how we live and feel. Whether a condition is chronic, acute,
+          inherited, or developed over time, learning about it empowers
+          individuals to take control of their health, seek support when needed,
+          and make informed decisions.
+        </h1>
+      </div>
+    </div>
+
+    <!-- Health Condition Introduction  -->
+    <div class="spacer-7">
+      <div class="health-condition-header">
+        <div class="health-row-condition first-row">
+          <h1>Learn</h1>
+          <h1>About</h1>
+        </div>
+        <div class="health-row-condition sec-row">
+          <h1>Health</h1>
+          <h1>Conditions</h1>
+        </div>
+        <div class="image-holder">
+          <div class="text-holder">
+            <div class="text-left">
+              <h1>
+                <span
+                  >Why Is It Important to Learn About Health Conditions?</span
+                >
+              </h1>
+              <p>
+                Learning about health conditions helps us take better care of
+                ourselves and those around us. <br />
+                By understanding common illnesses and their symptoms, we can
+                make informed decisions, seek help early, and even prevent
+                certain health problems.
+              </p>
+            </div>
+            <div class="text-right">
+              <h1><span>Understanding Health Conditions</span></h1>
+              <p>
+                Health conditions include a wide range of physical and mental
+                illnesses that can affect how we feel, think, and live each day.
+                These conditions may be short-term, like the flu, or long-term
+                and chronic, such as diabetes, heart disease, or depression.
+              </p>
+            </div>
+          </div>
+          <div class="scroll-icon">
+            <svg
+              viewBox="0 0 15 37"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M8 0V36C8.66667 32.6667 11 26 15 26" stroke="black" />
+              <path
+                d="M7.97613 36.0048C7.51258 32.8503 5.46839 26.4738 1 26.2037"
+                stroke="black"
+              />
+            </svg>
+
+            <p>Keep Scrolling</p>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1611764461465-09162da6465a?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Health Images Overlay -->
+    <div class="spacer-8">
+      <div class="scroll-wrapper">
+        <div class="image-stack">
+          <div class="image-container">
+            <div class="text-reveal for-1">
+              <h1>Covid - 19</h1>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1650074516062-c39941f36335?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Image 1"
+            />
+          </div>
+          <div class="image-container">
+            <div class="text-reveal for-2">
+              <h1>Inflammatory Bowel Disease</h1>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1711776376595-73df9be03088?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Image 2"
+            />
+          </div>
+          <div class="image-container">
+            <div class="text-reveal for-3">
+              <h1>Multiple Sclerosis</h1>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1614999776688-3980cc1e8640?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Image 3"
+            />
+          </div>
+          <div class="image-container">
+            <div class="text-reveal for-4">
+              <h1>Migraine</h1>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1677286003502-3a39d1707d92?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Image 4"
+            />
+          </div>
+          <div class="image-container">
+            <div class="text-reveal for-5">
+              <h1>Type 2 Diabetes</h1>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1683727186226-910f31a9da45?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Image 5"
+            />
+          </div>
+          <div class="image-container">
+            <div class="text-reveal for-5">
+              <h1>Breast Cancer</h1>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1647221597837-ff41b73a7f54?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Image 6"
+            />
+          </div>
+          <div class="image-container">
+            <div class="text-reveal for-6">
+              <h1>Rheumatoid Arthritis</h1>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1561570541-aaba21a3ecf0?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Image 7"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Health Cards Section -->
+    <div class="spacer-9">
+      <div class="health-card-header">
+        <h1 id="split-text">
+          Type of Health Conditions<ion-icon name="pulse"></ion-icon>
+        </h1>
+      </div>
+
+      <div class="health-card-container">
+        <div class="health-card card-1" data-index="0">
+          <div class="img-health-holder">
+            <img
+              src="https://images.unsplash.com/photo-1711776376595-73df9be03088?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+          </div>
+          <div class="text-health-holder">
+            <div class="disease-text-holder">
+              <h2>Inflammatory Bowel Disease</h2>
+              <svg
+                viewBox="0 0 15 37"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M8 0V36C8.66667 32.6667 11 26 15 26" stroke="white" />
+                <path
+                  d="M7.97613 36.0048C7.51258 32.8503 5.46839 26.4738 1 26.2037"
+                  stroke="white"
+                />
+              </svg>
+            </div>
+            <h4>
+              IBD is a long-term condition that causes swelling in the gut. It
+              includes Crohn’s disease and Ulcerative colitis.
+            </h4>
+          </div>
+        </div>
+        <div class="health-card card-2" data-index="1">
+          <div class="img-health-holder">
+            <img
+              src="https://images.unsplash.com/photo-1614999776688-3980cc1e8640?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+          </div>
+          <div class="text-health-holder">
+            <div class="disease-text-holder">
+              <h2>Multiple Sclerosis</h2>
+              <svg
+                viewBox="0 0 15 37"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M8 0V36C8.66667 32.6667 11 26 15 26" stroke="white" />
+                <path
+                  d="M7.97613 36.0048C7.51258 32.8503 5.46839 26.4738 1 26.2037"
+                  stroke="white"
+                />
+              </svg>
+            </div>
+            <h4>
+              MS is a long-term disease where the immune system attacks the
+              protective covering of nerves in the brain and spine.
+            </h4>
+          </div>
+        </div>
+        <div class="health-card card-3" data-index="2">
+          <div class="img-health-holder">
+            <img
+              src="https://images.unsplash.com/photo-1677286003502-3a39d1707d92?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+          </div>
+          <div class="text-health-holder">
+            <div class="disease-text-holder">
+              <h2>Migraine</h2>
+              <svg
+                viewBox="0 0 15 37"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M8 0V36C8.66667 32.6667 11 26 15 26" stroke="white" />
+                <path
+                  d="M7.97613 36.0048C7.51258 32.8503 5.46839 26.4738 1 26.2037"
+                  stroke="white"
+                />
+              </svg>
+            </div>
+            <h4>
+              Migraine is a type of headache that causes throbbing pain, usually
+              on one side of the head. It can come with nausea, vomiting, and
+              sensitivity to light or sound.
+            </h4>
+          </div>
+        </div>
+        <div class="health-card card-4" data-index="3">
+          <div class="img-health-holder">
+            <img
+              src="https://images.unsplash.com/photo-1683727186226-910f31a9da45?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+          </div>
+          <div class="text-health-holder">
+            <div class="disease-text-holder">
+              <h2>Type 2 Diabetes</h2>
+              <svg
+                viewBox="0 0 15 37"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M8 0V36C8.66667 32.6667 11 26 15 26" stroke="white" />
+                <path
+                  d="M7.97613 36.0048C7.51258 32.8503 5.46839 26.4738 1 26.2037"
+                  stroke="white"
+                />
+              </svg>
+            </div>
+            <h4>
+              Type 2 Diabetes is a condition where the body can’t use insulin
+              properly, causing high blood sugar levels.
+            </h4>
+          </div>
+        </div>
+        <div class="health-card card-5" data-index="0">
+          <div class="img-health-holder">
+            <img
+              src="https://images.unsplash.com/photo-1561570541-aaba21a3ecf0?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+          </div>
+          <div class="text-health-holder">
+            <div class="disease-text-holder">
+              <h2>Rheumatoid Arthritis</h2>
+              <svg
+                viewBox="0 0 15 37"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M8 0V36C8.66667 32.6667 11 26 15 26" stroke="white" />
+                <path
+                  d="M7.97613 36.0048C7.51258 32.8503 5.46839 26.4738 1 26.2037"
+                  stroke="white"
+                />
+              </svg>
+            </div>
+            <h4>
+              RA is an autoimmune disease that causes the body to attack its own
+              joints, leading to pain, swelling, and stiffness, usually in the
+              hands and feet.
+            </h4>
+          </div>
+        </div>
+        <div class="health-card card-5" data-index="1">
+          <div class="img-health-holder">
+            <img
+              src="https://images.unsplash.com/photo-1647221597837-ff41b73a7f54?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+          </div>
+          <div class="text-health-holder">
+            <div class="disease-text-holder">
+              <h2>Breast Cancer</h2>
+              <svg
+                viewBox="0 0 15 37"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M8 0V36C8.66667 32.6667 11 26 15 26" stroke="white" />
+                <path
+                  d="M7.97613 36.0048C7.51258 32.8503 5.46839 26.4738 1 26.2037"
+                  stroke="white"
+                />
+              </svg>
+            </div>
+            <h4>
+              Breast cancer is a disease where cells in the breast grow
+              uncontrollably. It can form a lump or be seen on a scan, and may
+              spread to other parts of the body if not treated early.
+            </h4>
+          </div>
+        </div>
+        <div class="health-card card-5" data-index="2">
+          <div class="img-health-holder">
+            <img
+              src="https://images.unsplash.com/photo-1650074516062-c39941f36335?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+          </div>
+          <div class="text-health-holder">
+            <div class="disease-text-holder">
+              <h2>Covid - 19</h2>
+              <svg
+                viewBox="0 0 15 37"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M8 0V36C8.66667 32.6667 11 26 15 26" stroke="white" />
+                <path
+                  d="M7.97613 36.0048C7.51258 32.8503 5.46839 26.4738 1 26.2037"
+                  stroke="white"
+                />
+              </svg>
+            </div>
+            <h4>
+              COVID-19 is a contagious disease caused by the coronavirus
+              (SARS-CoV-2). It spreads mainly through respiratory droplets when
+              an infected person coughs, sneezes, or talks.
+            </h4>
+          </div>
+        </div>
+        <div class="health-card card-5" data-index="3">
+          <div class="text-health-holder conclusion-health-holder">
+            <h2>Conclusion</h2>
+            <h4>
+              Chronic diseases like Inflammatory Bowel Disease, Multiple
+              Sclerosis, Migraine, Type 2 Diabetes, and Rheumatoid Arthritis
+              affect millions of people and can greatly impact daily life.
+              Although these conditions differ in symptoms and causes, they
+              often require long-term management, medical care, and lifestyle
+              changes. Early diagnosis and proper treatment can help reduce
+              complications and improve quality of life. Raising awareness and
+              supporting those affected is key to better health outcomes.
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Health Statistics Section -->
+    <div class="spacer-10">
+      <div class="health-stat-container">
+        <div class="small-spacer-stat"></div>
+        <div class="health-stat-text-holder">
+          <div class="health-stat-text">
+            <h2>How healthy is Malaysia today?</h2>
+            <h2>
+              see how Malaysia fares across physical activity, chronic disease,
+              and mental wellness indicators.
+            </h2>
+          </div>
+          <div class="health-text-data">
+            <h2>
+              Malaysia faces a moderate overall health risk with obesity rates
+              steadily increasing, highlighting growing public health challenges
+              that need attention.
+            </h2>
+            <div class="health-data-holder">
+              <div class="health-data">
+                <h3>Health Risk Score</h3>
+                <p class="rates">72</p>
+                <p><span>Moderate Risk</span></p>
+                <p><span>Last Updated: 2025</span></p>
+              </div>
+              <div class="health-data">
+                <h3>Obesity Rate</h3>
+                <p class="rates">19.2%</p>
+                <p><span>+4.6% in 7 years</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="health-text-data">
+            <h2>
+              The rising prevalence of diabetes and widespread high blood
+              pressure across different groups emphasize urgent cardiovascular
+              and metabolic health concerns.
+            </h2>
+            <div class="health-data-holder">
+              <div class="health-data">
+                <h3>Diabetes Rate</h3>
+                <p class="rates">18.3%</p>
+                <p><span>↑ from 13.4% (2015)</span></p>
+              </div>
+              <div class="health-data">
+                <h3>High Blood Preasure</h3>
+                <p class="rates">30.3%</p>
+                <p><span>By age or gender</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="health-text-data">
+            <h2>
+              A large portion of Malaysians lead inactive lifestyles and nearly
+              one-fifth of adults smoke, both factors contributing significantly
+              to poor health outcomes.
+            </h2>
+            <div class="health-data-holder">
+              <div class="health-data">
+                <h3>Active Lifestyle</h3>
+                <div class="span-text-data">
+                  <p class="rates">75.2%</p>
+                  <span>Inactive</span>
+                </div>
+
+                <p><span>Average: 3,200 steps/day</span></p>
+              </div>
+              <div class="health-data">
+                <h3>Smokers</h3>
+                <p class="rates">21.3%</p>
+                <p><span>Adult population (2019)</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="health-text-data">
+            <h2>
+              Mental health issues, especially depression and anxiety, are
+              rising sharply among youth, making it a critical area for
+              awareness and early intervention.
+            </h2>
+            <div class="health-data-holder">
+              <div class="health-data">
+                <h3>Depression & Anxiety</h3>
+                <p class="rates">29.2%</p>
+                <p><span>↑ among youth</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="data-src-holder">
+            <p>Data Source :</p>
+            <a
+              href="https://www.moh.gov.my/index.php/pages/view/58"
+              target="_blank"
+              class="source-link"
+              >NHMS Reports – Ministry of Health Malaysia</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer  -->
+    <div class="footer-spacer"></div>
+    <div class="health-footer">
+      <div class="footer-content">
+        <div class="get-contact-holder">
+          <div class="get-contact-text">
+            <h3>Get our wellness newsletter</h3>
+            <p>
+              Filter out the noise and nurture your inbox with health and
+              wellness advice that’s inclusive and rooted in medical expertise.
+            </p>
+          </div>
+          <div class="get-contact-email">
+            <input type="email" placeholder="Enter Your Email" />
+          </div>
+          <p class="privacy-text">
+            Your <span>privacy</span> Is important to us
+          </p>
+          <div class="button-contact">
+            <button>
+              <svg
+                viewBox="0 0 15 37"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M8 0V36C8.66667 32.6667 11 26 15 26" stroke="white" />
+                <path
+                  d="M7.97613 36.0048C7.51258 32.8503 5.46839 26.4738 1 26.2037"
+                  stroke="white"
+                />
+              </svg>
+            </button>
+            <p>Subscribe</p>
+          </div>
+        </div>
+        <div class="nav-footer-holder">
+          <div class="nav-footer-list">
+            <h4>Explore</h4>
+            <li><a href="">Featured</a></li>
+            <li><a href="">Health Quizzes</a></li>
+            <li><a href="">Health Conditions</a></li>
+            <li><a href="">Health Statistics</a></li>
+            <li><a href="">Sign Up/Login</a></li>
+          </div>
+          <div class="nav-footer-list">
+            <h4>Follow Us</h4>
+            <li><a href="">Instagram</a></li>
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Tiktok</a></li>
+          </div>
+          <div class="nav-footer-list">
+            <h4>Contact Us</h4>
+            <li>wl@brandsfobia.com</li>
+            <li>1111-2222 3333</li>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>© 2025 WellnessLink, All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trail Cursor -->
+    <div id="trailer"><ion-icon name="volume-mute-outline"></ion-icon></div>
+
+    <!-- Javascript Link -->
+    <script src="js/main.js" defer></script>
+    <script src="js/intro-text-animation.js" defer></script>
+    <script src="js/menu-overlay.js" defer></script>
+    <script src="js/animations.js" defer></script>
+
+    <!-- Quiz Script -->
+    <script type="module">
+      import { initLifestyleQuiz } from "./js/lifestyle-quiz.js";
+      initLifestyleQuiz();
+    </script>
+    <script type="module">
+      import { initDepressionQuiz } from "./js/depression-quiz.js";
+      initDepressionQuiz();
+    </script>
+
+    <!-- Lenis Smooth Scroll Plugin -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.0/bundled/lenis.js"
+    ></script>
+
+    <!-- Ion Icons Plugins -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+/* ===== Health Conditions Introduction ===== */
+
+.spacer-6 {
+  width: 100vw;
+  min-height: max-content;
+  background-color: #fff;
+  position: relative;
+}
+
+.health-intro-container {
+  width: 100%;
+  /* border: 1px solid red; */
+  padding: 100px 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.health-intro-container h1 {
+  width: 100%;
+  height: 100%;
+  color: black;
+  /* opacity: 0.5; */
+  font-size: 2.2em;
+  width: 95%;
+  text-transform: uppercase;
+}
+
+/* Health Conditions Header */
+
+.spacer-7 {
+  position: relative;
+  width: 100vw;
+  min-height: 100svh;
+  overflow-x: hidden;
+  z-index: 5;
+}
+
+.health-condition-header {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.health-row-condition {
+  height: 100%;
+  display: flex;
+  column-gap: 20px;
+}
+
+.health-condition-header h1 {
+  color: black;
+  text-align: center;
+  font-family: "Poppins";
+  text-transform: uppercase;
+  /* border: 1px solid red; */
+}
+
+.image-holder {
+  position: absolute;
+  width: 100%;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  overflow: hidden;
+  background-color: #fff;
+  z-index: 5;
+  opacity: 0;
+}
+
+.image-holder img {
+  position: absolute;
+  width: 20%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* right: 0; */
+  object-fit: cover;
+  object-position: 50% 0%;
+  z-index: 2;
+}
+
+.scroll-icon {
+  position: absolute;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  /* border: 1px solid red; */
+  z-index: 1;
+  bottom: 10%;
+}
+
+.scroll-icon p {
+  color: black;
+}
+
+.scroll-icon svg {
+  color: #000;
+  width: 20px;
+}
+
+.text-holder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.text-holder .text-left {
+  position: absolute;
+  width: 30vw;
+  /* border: 1px solid blue; */
+  left: 10%;
+  top: 17%;
+  z-index: 20;
+}
+
+.text-holder .text-right {
+  position: absolute;
+  /* border: 1px solid red; */
+  width: 30vw;
+  bottom: 30%;
+  right: 8%;
+  z-index: 20;
+}
+
+.text-right h1 {
+  font-size: 3em;
+  text-align: start;
+  text-transform: none;
+}
+.text-right p {
+  color: black;
+  margin-top: 30px;
+  font-size: 1em;
+  text-transform: none;
+}
+
+.text-left h1 {
+  /* border: 1px solid red; */
+  text-transform: none;
+  font-size: 3em;
+  text-align: start;
+}
+
+.text-left p {
+  color: black;
+  margin-top: 30px;
+  max-width: 25vw;
+  font-size: 1em;
+  text-transform: none;
+}

@@ -1,0 +1,174 @@
+/* ===== Health Statistic Section ===== */
+
+.spacer-10 {
+  width: 100vw;
+  min-height: 100svh;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 3;
+  overflow: hidden;
+  padding: 0;
+  transition: background-color 0.3s ease;
+}
+
+.spacer-10 h2 {
+  color: #fff;
+}
+
+.change-bg-insight {
+  background-color: #1e2e2e;
+}
+
+.change-text-insight {
+  color: #fff !important;
+}
+
+.health-stat-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  padding-top: 100px;
+  padding-right: 20px;
+  padding-bottom: 100px;
+  /* border: 1px solid red; */
+}
+
+.small-spacer-stat {
+  width: 80%;
+}
+
+.health-stat-text-holder {
+  width: 100%;
+  align-self: self-start;
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  gap: 100px;
+}
+
+.health-stat-text-holder h2 {
+  font-size: 2.5em;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  visibility: hidden;
+}
+
+.health-text-data {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.health-data-holder {
+  display: flex;
+  justify-content: flex-start;
+  gap: 100px;
+  width: 100%;
+  height: 100%;
+}
+
+.health-data {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+.health-data h3 {
+  font-size: 2.2em;
+  font-family: "PP Editorial Old";
+  color: #fff;
+  font-weight: 300;
+}
+
+.health-stat-text-holder h2 .line-mask-stats {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  /* border: 1px solid red; */
+}
+
+.health-stat-text-holder h2 .line-mask-stats .span-stats-anim {
+  position: relative;
+  will-change: transform;
+  font-style: normal;
+  font-family: "Expletus Sans";
+  text-transform: none;
+}
+
+.health-data p span {
+  text-transform: none;
+  font-size: 1.5em;
+  color: gray;
+}
+
+.health-data .rates {
+  font-size: 4em;
+  text-transform: none;
+}
+
+.health-data .span-text-data {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.health-data .span-text-data span {
+  font-size: 2.2em;
+  color: #df4e4e;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
+.data-src-holder {
+  margin-top: 30px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  display: flex;
+  width: max-content;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.data-src-holder p {
+  text-transform: none;
+  font-weight: 400;
+  font-size: 0.8em;
+}
+
+.data-src-holder a {
+  position: relative;
+  display: inline-block;
+  will-change: transform;
+  color: rgb(48, 140, 225);
+  text-transform: none;
+  font-size: 1rem;
+  transition: color 0.5s;
+  font-style: italic;
+  padding-bottom: 5px;
+}
+
+.data-src-holder a::after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s cubic-bezier(0.34, 0.75, 0.59, 0.95);
+}
+
+.data-src-holder a:hover:after {
+  transform: scaleX(1);
+  transform-origin: left;
+}

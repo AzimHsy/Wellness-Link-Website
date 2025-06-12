@@ -1,0 +1,155 @@
+/* ===== Google Fonts =====*/
+
+@import url("https://fonts.cdnfonts.com/css/pp-neue-montreal");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ruwudu:wght@400;500;600;700&display=swap");
+
+/* ====== Paid Fonts ====== */
+
+@font-face {
+  font-family: "PP Editorial Old";
+  src: url("../../fonts/EditorialOldFont/PPEditorialOld-Regular.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Dastin";
+  src: url("../../fonts/dastin/Dastin.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Glitten";
+  src: url("../../fonts/glitten/Glitten-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ===== Default Settings =====*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: "PP Neue Montreal", sans-serif, "Saans TRIAL";
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+h1 span {
+  font-family: "PP Editorial Old", "PP Neue Montreal";
+  font-weight: 500;
+  font-style: italic;
+  -webkit-font-smoothing: antialiased;
+}
+
+a,
+p {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== trailer cursor ( video hover ) ===== */
+
+#trailer {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background-color: #1e2e2e;
+  border-radius: 20px;
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+#trailer ion-icon {
+  width: 8px;
+  color: white;
+}
+
+/* ===== Reponsive ===== */
+
+@media (max-width: 900px) {
+  p {
+    font-size: 13px;
+  }
+
+  .progress-bar {
+    justify-content: flex-end;
+  }
+
+  .progress-bar p:nth-child(1) {
+    display: none;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .cta {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cta-label p {
+    font-size: 3px;
+    text-decoration: none;
+  }
+}
+
+/* ===== Lenis Smooth Scroll Setting ===== */
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
