@@ -103,10 +103,6 @@ p {
 /* ===== Reponsive ===== */
 
 @media (max-width: 900px) {
-  p {
-    font-size: 13px;
-  }
-
   .progress-bar {
     justify-content: flex-end;
   }
@@ -123,23 +119,8 @@ p {
     font-size: 1.6rem;
   }
 
-  .intro-logo {
-    transform: translate(50%, -50%);
-  }
-
-  .nav-links {
-    display: none;
-  }
-
   .cta {
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .cta-label p {
-    font-size: 3px;
-    text-decoration: none;
+    width: 90%;
   }
 }
 
