@@ -119,6 +119,14 @@ p {
     font-size: 2.5rem;
   }
 
+  .intro-logo h1 span {
+    font-size: 1.6rem;
+  }
+
+  .intro-logo {
+    transform: translate(50%, -50%);
+  }
+
   .nav-links {
     display: none;
   }
