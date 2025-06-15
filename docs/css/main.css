@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: "PP Editorial Old";
-  src: url("/docs/fonts/EditorialOldFont/PPEditorialOld-Regular.otf")
+  src: url("../fonts/EditorialOldFont/PPEditorialOld-Regular.otf")
     format("opentype");
   font-weight: normal;
   font-style: normal;
@@ -19,14 +19,14 @@
 
 @font-face {
   font-family: "Dastin";
-  src: url("/docs/fonts/dastin/Dastin.otf") format("opentype");
+  src: url("../fonts/dastin/Dastin.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Glitten";
-  src: url("/docs/fonts/glitten/Glitten-Regular.otf") format("opentype");
+  src: url("../fonts/glitten/Glitten-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
