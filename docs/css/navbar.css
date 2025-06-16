@@ -187,6 +187,7 @@
 
   .logo a h4 {
     font-size: 1.1rem;
+    text-shadow: none;
   }
 
   .signup-btn-container a {
@@ -216,6 +217,11 @@
 @media (max-width: 480px) {
   .logo a h4 {
     font-size: 14px;
+    text-shadow: none;
+  }
+
+  .signup-btn-container {
+    padding: 15px 10px;
   }
 
   .signup-btn-container a {

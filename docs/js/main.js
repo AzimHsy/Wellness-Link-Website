@@ -58,27 +58,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   gsap.to(".second-loader", {
     clipPath: "polygon(0% 45%, 25% 45%, 25% 55%, 0% 55%)",
-    duration: 1,
+    duration: 0.6,
     ease: customEase,
     delay: 1,
   });
 
   gsap.to(".second-loader", {
     clipPath: "polygon(0% 45%, 100% 45%, 100% 55%, 0% 55%)",
-    duration: 2,
+    duration: 1.6,
     ease: customEase,
     delay: 2,
 
     onStart: () => {
       gsap.to(".progress-bar", {
         width: "100vw",
-        duration: 2,
+        duration: 1.6,
         ease: customEase,
       });
 
       gsap.to(counter, {
         innerHTML: 100,
-        duration: 2,
+        duration: 1.7,
         ease: customEase,
         snap: { innerHTML: 1 },
       });
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
     duration: 1,
     ease: customEase,
-    delay: 4,
+    delay: 3.525,
     onStart: () => {
       gsap.to(".progress-bar", {
         opacity: 0,
@@ -108,9 +108,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       loadTL.to(".divider", {
         scaleY: "100%",
-        duration: 0.5,
+        duration: 0.7,
         onComplete: () =>
-          gsap.to(".divider", { opacity: 0, duration: 0.4, delay: 0.3 }),
+          gsap.to(".divider", { opacity: 0, duration: 0.3, delay: 0.4 }),
       });
 
       loadTL.to("#word-1 h1", {
@@ -400,40 +400,41 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  gsap.to(".feature-container", {
-    scrollTrigger: {
-      trigger: ".spacer-1",
-      // markers: true,
-      start: "top top",
-      end: "bottom top",
-      scrub: true,
-    },
-    y: -300,
-    duration: 1,
-  });
+  const mm = gsap.matchMedia();
 
-  gsap.to(".feature1", {
-    scrollTrigger: {
-      trigger: ".spacer-1",
-      // markers: true,
-      start: "top top",
-      end: "bottom top",
-      scrub: true,
-    },
-    y: -400,
-    duration: 1,
-  });
+  mm.add("(min-width: 769px)", () => {
+    gsap.to(".feature-container", {
+      scrollTrigger: {
+        trigger: ".spacer-1",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+      y: -300,
+      duration: 1,
+    });
 
-  gsap.to(".feature3", {
-    scrollTrigger: {
-      trigger: ".spacer-1",
-      // markers: true,
-      start: "top top",
-      end: "bottom top",
-      scrub: true,
-    },
-    y: -200,
-    duration: 1,
+    gsap.to(".feature1", {
+      scrollTrigger: {
+        trigger: ".spacer-1",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+      y: -400,
+      duration: 1,
+    });
+
+    gsap.to(".feature3", {
+      scrollTrigger: {
+        trigger: ".spacer-1",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+      y: -200,
+      duration: 1,
+    });
   });
 
   // ======== Lifestyle Quiz Section ======== //

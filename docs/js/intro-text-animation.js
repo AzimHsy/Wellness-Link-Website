@@ -1,7 +1,8 @@
 const introHeader = new SplitType(".intro-holder h1", {
-  types: "lines",
+  types: "words, lines",
   tagName: "div",
   lineClass: "line-mask",
+  autoSplit: true,
 });
 
 introHeader.lines.forEach((line) => {
