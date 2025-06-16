@@ -212,3 +212,13 @@
     height: 20px;
   }
 }
+
+@media (max-width: 480px) {
+  .logo a h4 {
+    font-size: 14px;
+  }
+
+  .signup-btn-container a {
+    font-size: 12px;
+  }
+}

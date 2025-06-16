@@ -162,20 +162,12 @@
 /* ===== Reponsive ===== */
 
 @media (max-width: 900px) {
-  .progress-bar {
-    justify-content: flex-end;
+  .header h1 {
+    font-size: 2.6rem;
   }
 
-  .progress-bar p:nth-child(1) {
-    display: none;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  .intro-logo h1 span {
-    font-size: 1.6rem;
+  .header p {
+    font-size: 12px;
   }
 
   .cta {
@@ -189,5 +181,27 @@
 
   .cta-label p {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 2.4rem;
+  }
+
+  .header p {
+    font-size: 11px;
+  }
+  .cta {
+    width: 70%;
+    height: 50px;
+  }
+
+  .cta-label {
+    left: 45%;
+  }
+
+  .cta-label p {
+    font-size: 10px;
   }
 }

@@ -114,7 +114,7 @@
 
 @media (max-width: 768px) {
   .progress-bar {
-    padding: 1em;
+    justify-content: flex-end;
   }
 
   .progress-bar p:nth-child(1) {
@@ -139,11 +139,27 @@
 }
 
 @media (max-width: 480px) {
+  .progress-bar {
+    justify-content: flex-end;
+  }
+
+  .progress-bar p:nth-child(1) {
+    display: none;
+  }
+
   .word h1 {
-    font-size: 1.6rem;
+    font-size: 13rem;
   }
 
   .progress-bar p {
-    font-size: 12px;
+    font-size: 11px;
+  }
+
+  .intro-logo {
+    /* transform: translateX(-99px); */
+  }
+
+  .intro-logo h1 span {
+    font-size: 1.5rem;
   }
 }
