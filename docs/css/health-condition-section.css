@@ -159,3 +159,74 @@
   font-size: 1em;
   text-transform: none;
 }
+@media (max-width: 1024px) {
+  .health-intro-container h1 {
+    font-size: 1.8em;
+  }
+
+  .text-left h1,
+  .text-right h1 {
+    font-size: 2.5em;
+  }
+
+  .text-left p,
+  .text-right p {
+    font-size: 0.95em;
+  }
+}
+
+@media (max-width: 768px) {
+  .health-intro-container {
+    padding: 80px 50px;
+  }
+
+  .health-intro-container h1 {
+    font-size: 1.5em;
+  }
+
+  .text-left h1,
+  .text-right h1 {
+    font-size: 2em;
+  }
+
+  .text-left p,
+  .text-right p {
+    font-size: 0.9em;
+  }
+
+  .text-left,
+  .text-right {
+    width: 80vw;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%);
+  }
+
+  .text-left {
+    top: 15%;
+  }
+
+  .text-right {
+    bottom: 20%;
+  }
+}
+
+@media (max-width: 480px) {
+  .health-intro-container {
+    padding: 60px 30px;
+  }
+
+  .health-intro-container h1 {
+    font-size: 1.2em;
+  }
+
+  .text-left h1,
+  .text-right h1 {
+    font-size: 1.6em;
+  }
+
+  .text-left p,
+  .text-right p {
+    font-size: 0.85em;
+  }
+}

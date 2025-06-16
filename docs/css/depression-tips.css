@@ -71,3 +71,84 @@
   justify-self: self-end;
   /* transition: color 0.5s ease; */
 }
+
+@media (max-width: 1024px) {
+  .tips-section {
+    padding: 2em 3em;
+  }
+
+  .tip {
+    grid-template-columns: 0.3fr 1fr;
+    gap: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .tip-description {
+    grid-column: span 2;
+    justify-self: start;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .tips-section {
+    padding: 2em 1.5em;
+  }
+
+  .tips-section h2 {
+    font-size: 0.95rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .tips-grid {
+    gap: 3rem;
+  }
+
+  .tip {
+    grid-template-columns: 0.2fr 1fr;
+    font-size: 1rem;
+    gap: 0.8rem;
+  }
+
+  .tip-number {
+    font-size: 1.2rem;
+  }
+
+  .tip-title {
+    font-size: 1rem;
+  }
+
+  .tip-description {
+    font-size: 0.95rem;
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .tips-section {
+    padding: 1.5em 1em;
+  }
+
+  .tip {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    font-size: 0.95rem;
+    gap: 0.3rem;
+  }
+
+  .tip-number {
+    font-size: 1.2rem;
+  }
+
+  .tip-title {
+    font-size: 1rem;
+  }
+
+  .tip-description {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    justify-self: start;
+    max-width: 100%;
+  }
+}

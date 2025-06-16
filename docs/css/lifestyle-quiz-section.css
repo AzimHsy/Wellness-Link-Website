@@ -343,3 +343,58 @@
   z-index: 0;
   transition: all 0.5s ease;
 }
+
+@media (max-width: 768px) {
+  .quiz-container {
+    width: 320px;
+    height: auto;
+    transform: translateY(-300px);
+    padding-bottom: 40px;
+  }
+
+  .black-container {
+    /* background-color: transparent; */
+  }
+
+  .header-quiz h1:first-child {
+    font-size: 2.5em;
+  }
+
+  .bulat {
+    display: none;
+  }
+
+  .header-quiz h1:last-child span {
+    font-size: 2.4rem;
+  }
+
+  .question {
+    padding: 20px;
+  }
+
+  .question h2 {
+    font-size: 1.5em;
+    width: 90%;
+  }
+
+  .ans span {
+    padding: 20px;
+    font-size: 0.9em;
+  }
+
+  .ans-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .result h2 {
+    font-size: 1.5em;
+    width: 90%;
+  }
+
+  .result p,
+  .feedback-msg p {
+    font-size: 0.95em;
+    width: 90%;
+  }
+}

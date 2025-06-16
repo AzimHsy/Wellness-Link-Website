@@ -238,3 +238,106 @@
   font-weight: 300;
   letter-spacing: 1px;
 }
+
+/* Responsive Footer */
+@media screen and (max-width: 1024px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 40px;
+  }
+
+  .get-contact-holder {
+    padding-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .get-contact-text {
+    align-items: center;
+    text-align: center;
+  }
+
+  .get-contact-text p {
+    max-width: 90%;
+  }
+
+  .get-contact-email {
+    justify-content: center;
+  }
+
+  .get-contact-email input {
+    width: 90%;
+  }
+
+  .button-contact {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-footer-holder {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .nav-footer-list {
+    width: 40%;
+    align-items: center;
+  }
+
+  .nav-footer-list h4 {
+    font-size: 1em;
+  }
+
+  .copyright {
+    position: static;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav-footer-list {
+    width: 80%;
+  }
+
+  .get-contact-email input {
+    padding: 12px 20px;
+    font-size: 1em;
+  }
+
+  .get-contact-text {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .get-contact-text h3 {
+    font-size: 1.5em;
+  }
+
+  .button-contact button {
+    padding: 20px;
+  }
+
+  .button-contact p {
+    font-size: 0.9em;
+  }
+
+  .privacy-text {
+    font-size: 0.8em;
+  }
+
+  .nav-footer-list li,
+  .nav-footer-list li a {
+    font-size: 0.95em;
+  }
+
+  .copyright p {
+    font-size: 0.75em;
+  }
+}

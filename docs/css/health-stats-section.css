@@ -172,3 +172,101 @@
   transform: scaleX(1);
   transform-origin: left;
 }
+
+@media (max-width: 1024px) {
+  .health-stat-text-holder {
+    gap: 60px;
+    padding: 0 40px;
+  }
+
+  .health-stat-text-holder h2 {
+    font-size: 2em;
+  }
+
+  .health-data-holder {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .health-data h3 {
+    font-size: 1.8em;
+  }
+
+  .health-data .rates {
+    font-size: 3em;
+  }
+
+  .health-data p span {
+    font-size: 1.2em;
+  }
+
+  .health-data .span-text-data span {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 768px) {
+  .health-stat-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .health-stat-text-holder h2 {
+    font-size: 1.6em;
+  }
+
+  .health-data h3 {
+    font-size: 1.5em;
+  }
+
+  .health-data .rates {
+    font-size: 2.5em;
+  }
+
+  .health-data p span {
+    font-size: 1em;
+  }
+
+  .health-data .span-text-data span {
+    font-size: 1.5em;
+  }
+
+  .data-src-holder {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .health-stat-text-holder {
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .small-spacer-stat {
+    display: none;
+  }
+
+  .health-stat-text-holder h2 {
+    font-size: 1.3em;
+  }
+
+  .health-data h3 {
+    font-size: 1.2em;
+  }
+
+  .health-data .rates {
+    font-size: 2em;
+  }
+
+  .health-data p span {
+    font-size: 0.9em;
+  }
+
+  .health-data .span-text-data span {
+    font-size: 1.2em;
+  }
+
+  .data-src-holder a {
+    font-size: 0.9rem;
+  }
+}

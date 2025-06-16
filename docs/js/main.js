@@ -442,9 +442,6 @@ document.addEventListener("DOMContentLoaded", () => {
   gsap.to(".header-quiz h1", {
     scrollTrigger: {
       trigger: ".spacer-1",
-      // pin: ".header-quiz h1",
-      // pinSpacing: false,
-      // markers: true,
       start: "bottom 36%",
       end: "+=500",
       scrub: true,
@@ -452,52 +449,50 @@ document.addEventListener("DOMContentLoaded", () => {
     y: 330,
   });
 
-  gsap.to(".header-quiz h1", {
-    scrollTrigger: {
-      trigger: ".spacer-2",
-      pin: ".spacer-2",
-      pinSpacing: false,
-      // markers: true,
-      start: "top top",
-      end: "+=250",
-      scrub: true,
-    },
-  });
+  mm.add("(min-width: 769px)", () => {
+    gsap.to(".header-quiz h1", {
+      scrollTrigger: {
+        trigger: ".spacer-2",
+        pin: ".spacer-2",
+        pinSpacing: false,
+        // markers: true,
+        start: "top top",
+        end: "+=250",
+        scrub: true,
+      },
+    });
+    gsap.to(".bulat", {
+      scrollTrigger: {
+        trigger: ".spacer-1",
+        start: "bottom 36%",
+        end: "+=1200",
+        scrub: true,
+      },
+      clipPath: "ellipse(43% 100% at 50% -1%)",
+      duration: 1,
+    });
 
-  gsap.to(".bulat", {
-    scrollTrigger: {
-      trigger: ".spacer-1",
-      // markers: true,
-      start: "bottom 36%",
-      end: "+=1200",
-      scrub: true,
-    },
-    clipPath: "ellipse(43% 100% at 50% -1%)",
-    duration: 1,
-  });
+    gsap.to(".bulat", {
+      scrollTrigger: {
+        trigger: ".spacer-1",
+        start: "bottom 25%",
+        end: "+=1200",
+        scrub: true,
+      },
+      y: 220,
+      duration: 1,
+    });
 
-  gsap.to(".bulat", {
-    scrollTrigger: {
-      trigger: ".spacer-1",
-      // markers: true,
-      start: "bottom 25%",
-      end: "+=1200",
-      scrub: true,
-    },
-    y: 220,
-    duration: 1,
-  });
-
-  gsap.from(".quiz-container", {
-    scrollTrigger: {
-      trigger: ".spacer-1",
-      // markers: true,
-      start: "bottom 25%",
-      end: "+=500",
-      scrub: true,
-    },
-    y: 0,
-    duration: 1,
+    gsap.from(".quiz-container", {
+      scrollTrigger: {
+        trigger: ".spacer-1",
+        start: "bottom 25%",
+        end: "+=500",
+        scrub: true,
+      },
+      y: 0,
+      duration: 1,
+    });
   });
 
   // ======== Depression Section ======== //
@@ -921,7 +916,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ScrollTrigger.create({
     trigger: ".spacer-10",
     start: "top 70%",
-    // end: "+=1700",
+    end: "+=3800",
     // markers: true,
     toggleClass: {
       targets: [
