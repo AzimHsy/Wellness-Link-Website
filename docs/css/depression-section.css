@@ -186,22 +186,16 @@
 }
 
 .text-below-container button {
-  padding: 17px 0;
-  border: 1px solid white;
+  border: none;
+  outline: none;
   background-color: transparent;
-  border-radius: 50px;
-  width: 50%;
+  /* border-radius: 50px; */
+  font-style: italic;
+  width: max-content;
   color: white;
   margin-top: 35px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.4s ease, color 0.4s ease;
-}
-
-.text-below-container button:hover {
-  background-color: white;
-  color: black;
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 
 .img-cover {

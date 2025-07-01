@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap");
+
 .intro-section {
   position: relative;
   min-height: 200svh;
   width: 100%;
-  background-color: #fff;
+  background-color: hsl(0, 0%, 90%);
   padding-bottom: 200px;
   transition: background-color 0.3s ease;
 }
@@ -35,10 +37,9 @@
 }
 
 .intro-holder h1 {
-  color: #000;
+  color: hsl(0, 0%, 6%);
   width: 100%;
-  font-size: 3em;
-
+  font-size: 3.3em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: start;
@@ -52,10 +53,11 @@
   position: relative;
   will-change: transform;
   font-style: normal;
-  font-family: Poppins;
+  font-family: "Signika", sans-serif;
   text-transform: none;
   font-weight: 600;
-  letter-spacing: 0.015em;
+  /* letter-spacing: -2px; */
+  line-height: 1;
 }
 
 .intro-img-spacer {
@@ -184,6 +186,7 @@
   width: 100%;
   height: 150%;
   object-fit: cover;
+  object-position: 20% 0%;
 }
 
 .intro-text2-holder {

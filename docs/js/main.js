@@ -41,178 +41,179 @@ document.addEventListener("DOMContentLoaded", () => {
   // ======== Loader Intro Animations ======== //
 
   //  unComment for debugging ( prevent animation to load )
-  // if (!sessionStorage.getItem("animationPlayed")) {
-  const loadTL = gsap.timeline({
-    delay: 0.3,
-    defaults: {
-      ease: "hop",
-    },
-  });
-
-  lenis.stop();
-
-  gsap.set(".hero-img", {
-    scale: 1.7,
-    // rotation: -50,
-  });
-
-  gsap.to(".second-loader", {
-    clipPath: "polygon(0% 45%, 25% 45%, 25% 55%, 0% 55%)",
-    duration: 0.6,
-    ease: customEase,
-    delay: 1,
-  });
-
-  gsap.to(".second-loader", {
-    clipPath: "polygon(0% 45%, 100% 45%, 100% 55%, 0% 55%)",
-    duration: 1.6,
-    ease: customEase,
-    delay: 2,
-
-    onStart: () => {
-      gsap.to(".progress-bar", {
-        width: "100vw",
-        duration: 1.6,
-        ease: customEase,
-      });
-
-      gsap.to(counter, {
-        innerHTML: 100,
-        duration: 1.7,
-        ease: customEase,
-        snap: { innerHTML: 1 },
-      });
-    },
-  });
-
-  gsap.to(".second-loader", {
-    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-    duration: 1,
-    ease: customEase,
-    delay: 3.525,
-    onStart: () => {
-      gsap.to(".progress-bar", {
-        opacity: 0,
-        duration: 0.3,
-      });
-    },
-    onComplete: () => {
-      loadTL.to(
-        ".word h1",
-        {
-          y: "0%",
-          duration: 0.7,
-        },
-        "<"
-      );
-
-      loadTL.to(".divider", {
-        scaleY: "100%",
-        duration: 0.7,
-        onComplete: () =>
-          gsap.to(".divider", { opacity: 0, duration: 0.3, delay: 0.4 }),
-      });
-
-      loadTL.to("#word-1 h1", {
-        y: "100%",
-        duration: 0.8,
-        delay: 0.2,
-      });
-
-      loadTL.to(
-        "#word-2 h1",
-        {
-          y: "-100%",
-          duration: 0.7,
-        },
-        "<"
-      );
-      loadTL.to(".block", {
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-        duration: 0.7,
-        stagger: 0.1,
-        delay: 0.1,
-        onStart: () => {
-          gsap.to(".hero-img", {
-            scale: 1,
-            duration: 1.6,
-            ease: "hop",
-          });
-          const heroVideo = document.querySelector(".hero-video");
-          heroVideo.play();
-
-          loadTL.to(
-            [".nav", ".line h1", ".line p"],
-            {
-              y: "0%",
-              duration: 2,
-              stagger: 0.2,
-
-              onComplete: () => {
-                document.querySelector(".first-loader").style.display = "none";
-              },
-            },
-            "<"
-          );
-
-          loadTL.to(
-            [".cta", ".cta-icon"],
-            {
-              scale: 1,
-              duration: 2,
-              stagger: 0.75,
-              delay: 0.75,
-            },
-            "<"
-          );
-
-          loadTL.to(
-            ".cta-label p",
-            {
-              y: "0%",
-              duration: 2,
-              delay: 0.5,
-            },
-            "<"
-          );
-        },
-      });
-      lenis.start();
-      gsap.to(".hero-video", {
-        duration: 1,
-        opacity: 1,
+  if (!sessionStorage.getItem("animationPlayed")) {
+    const loadTL = gsap.timeline({
+      delay: 0.3,
+      defaults: {
         ease: "hop",
-      });
-    },
-  });
+      },
+    });
 
-  sessionStorage.setItem("animationPlayed", "true");
-  // ======= unComment to Skip animation — just show elements in final state ======== //
-  // } else {
-  //   document.querySelector(".first-loader").style.display = "none";
-  //   gsap.set(
-  //     [
-  //       ".word h1",
-  //       ".nav",
-  //       ".line h1",
-  //       ".line p",
-  //       ".cta",
-  //       ".cta-icon",
-  //       ".cta-label p",
-  //     ],
-  //     { y: "0%" }
-  //   );
-  //   gsap.set(".hero-img", { scale: 1 });
-  //   gsap.set(".hero-video", { opacity: 1 });
-  //   gsap.set(".cta", { scale: 1 });
-  //   gsap.set(".cta-icon", { scale: 1 });
+    lenis.stop();
 
-  //   // Play video manually
-  //   const heroVideo = document.querySelector(".hero-video");
-  //   if (heroVideo) {
-  //     heroVideo.play();
-  //   }
-  // }
+    gsap.set(".hero-img", {
+      scale: 1.7,
+      // rotation: -50,
+    });
+
+    gsap.to(".second-loader", {
+      clipPath: "polygon(0% 45%, 25% 45%, 25% 55%, 0% 55%)",
+      duration: 0.6,
+      ease: customEase,
+      delay: 1,
+    });
+
+    gsap.to(".second-loader", {
+      clipPath: "polygon(0% 45%, 100% 45%, 100% 55%, 0% 55%)",
+      duration: 1.6,
+      ease: customEase,
+      delay: 2,
+
+      onStart: () => {
+        gsap.to(".progress-bar", {
+          width: "100vw",
+          duration: 1.6,
+          ease: customEase,
+        });
+
+        gsap.to(counter, {
+          innerHTML: 100,
+          duration: 1.7,
+          ease: customEase,
+          snap: { innerHTML: 1 },
+        });
+      },
+    });
+
+    gsap.to(".second-loader", {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      duration: 1,
+      ease: customEase,
+      delay: 3.525,
+      onStart: () => {
+        gsap.to(".progress-bar", {
+          opacity: 0,
+          duration: 0.3,
+        });
+      },
+      onComplete: () => {
+        loadTL.to(
+          ".word h1",
+          {
+            y: "0%",
+            duration: 0.7,
+          },
+          "<"
+        );
+
+        loadTL.to(".divider", {
+          scaleY: "100%",
+          duration: 0.7,
+          onComplete: () =>
+            gsap.to(".divider", { opacity: 0, duration: 0.3, delay: 0.4 }),
+        });
+
+        loadTL.to("#word-1 h1", {
+          y: "100%",
+          duration: 0.8,
+          delay: 0.2,
+        });
+
+        loadTL.to(
+          "#word-2 h1",
+          {
+            y: "-100%",
+            duration: 0.7,
+          },
+          "<"
+        );
+        loadTL.to(".block", {
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+          duration: 0.7,
+          stagger: 0.1,
+          delay: 0.1,
+          onStart: () => {
+            gsap.to(".hero-img", {
+              scale: 1,
+              duration: 1.6,
+              ease: "hop",
+            });
+            const heroVideo = document.querySelector(".hero-video");
+            heroVideo.play();
+
+            loadTL.to(
+              [".nav", ".line h1", ".line p"],
+              {
+                y: "0%",
+                duration: 2,
+                stagger: 0.2,
+
+                onComplete: () => {
+                  document.querySelector(".first-loader").style.display =
+                    "none";
+                },
+              },
+              "<"
+            );
+
+            loadTL.to(
+              [".cta", ".cta-icon"],
+              {
+                scale: 1,
+                duration: 2,
+                stagger: 0.75,
+                delay: 0.75,
+              },
+              "<"
+            );
+
+            loadTL.to(
+              ".cta-label p",
+              {
+                y: "0%",
+                duration: 2,
+                delay: 0.5,
+              },
+              "<"
+            );
+          },
+        });
+        lenis.start();
+        gsap.to(".hero-video", {
+          duration: 1,
+          opacity: 1,
+          ease: "hop",
+        });
+      },
+    });
+
+    sessionStorage.setItem("animationPlayed", "true");
+    // ======= unComment to Skip animation — just show elements in final state ======== //
+  } else {
+    document.querySelector(".first-loader").style.display = "none";
+    gsap.set(
+      [
+        ".word h1",
+        ".nav",
+        ".line h1",
+        ".line p",
+        ".cta",
+        ".cta-icon",
+        ".cta-label p",
+      ],
+      { y: "0%" }
+    );
+    gsap.set(".hero-img", { scale: 1 });
+    gsap.set(".hero-video", { opacity: 1 });
+    gsap.set(".cta", { scale: 1 });
+    gsap.set(".cta-icon", { scale: 1 });
+
+    // Play video manually
+    const heroVideo = document.querySelector(".hero-video");
+    if (heroVideo) {
+      heroVideo.play();
+    }
+  }
 
   // ====== Parallax scroll effect to the hero video =======
 
@@ -312,7 +313,7 @@ document.addEventListener("DOMContentLoaded", () => {
     opacity: 0,
     scrollTrigger: {
       trigger: ".health-awareness-spacer",
-      start: "top 80%",
+      start: "top 100%",
       end: "+=300",
       scrub: 1,
       // markers: true,
@@ -407,22 +408,21 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollTrigger: {
         trigger: ".spacer-1",
         start: "top top",
-        end: "bottom top",
+        end: "+=1300",
         scrub: true,
       },
-      y: -300,
-      duration: 1,
+      y: -150,
     });
 
     gsap.to(".feature1", {
       scrollTrigger: {
         trigger: ".spacer-1",
         start: "top top",
-        end: "bottom top",
+        end: "+=1300",
         scrub: true,
+        markers: true,
       },
       y: -400,
-      duration: 1,
     });
 
     gsap.to(".feature3", {
@@ -446,7 +446,7 @@ document.addEventListener("DOMContentLoaded", () => {
       end: "+=500",
       scrub: true,
     },
-    y: 330,
+    y: 300,
   });
 
   mm.add("(min-width: 769px)", () => {
@@ -680,7 +680,7 @@ document.addEventListener("DOMContentLoaded", () => {
       scrub: true,
       // markers: true,
     },
-    y: 80,
+    y: 50,
   });
 
   gsap.to(".depression-header h1", {
